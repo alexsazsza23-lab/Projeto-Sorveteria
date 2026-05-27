@@ -1,75 +1,80 @@
-/*seletor universal*/
+/* Seletor universal - Ótima prática para reset */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*Seletor de tag*/
-
+/* Seletor de tag */
 body{
-    background-color:white;
+    background-color: white;
     font-family: Arial, Helvetica, sans-serif;
-    color:palevioletred;
+    color: palevioletred;
 }
 
 #cabecalho{
     background-color: pink;
-    color:white;
+    color: white;
     text-align: center;
     padding: 25px;
 }
 
 #titulo{
-    color:white;
+    color: white;
     font-size: 2.5em;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
+
 #nav{
     background-color: rgb(250, 158, 173);
+    text-align: center; /* Centraliza os itens do menu se necessário */
 }
 
 .menu-item{
     display: inline-block;
     margin: 10px;
-    font-size:1.5em;
+    font-size: 1.5em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color:rgb(255, 255, 255);
-    text-align: center;
+    color: rgb(255, 255, 255);
 }
 
-
+/* Corrigido: Seletor hover para links dentro do menu */
 .menu-item a:hover{
-    color:pink;
-    font-size: 1.6em;
-    transition:0.5s
+    color: pink;
+    font-size: 1.1em; /* Cuidado para não quebrar o layout com tamanhos muito grandes no hover */
+    transition: 0.5s;
 }
+
 #destaque{
-    text-align:center;
-    font-size: 
+    text-align: center;
+    font-size: 1.2em; /* Adicionado valor que faltava */
 }
+
 .btn-pedir{
     background-color: rgb(250, 158, 173);
     color: white;
     padding: 15px 20px;
     border-radius: 20px;
-    border:none;
+    border: none;
     font-family: 'Quicksand', sans-serif;
     font-size: 20px;
-    
+    cursor: pointer; /* Adicionado para mostrar que é clicável */
+    transition: 0.3s;
 }
-.btn-pedir hover{
-    color: #fa8fa1;
 
+/* Corrigido: Sintaxe do hover */
+.btn-pedir:hover{
+    background-color: palevioletred; /* Invertendo as cores para destaque */
+    color: white;
 }
 
 .sorvete{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
-    color:palevioletred;
-    
+    color: palevioletred;
 }
+
 .sundae{
     width: 300px;
+    height: auto; /* Mantém a proporção da imagem */
 }
