@@ -27,27 +27,29 @@ body{
 
 #nav{
     background-color: rgb(250, 158, 173);
-    text-align: center; /* Centraliza os itens do menu se necessário */
+    text-align: center; 
+    padding: 10px;
 }
 
 .menu-item{
     display: inline-block;
     margin: 10px;
-    font-size: 1.5em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-    color: rgb(255, 255, 255);
+    font-size: 1.2em; /* Ajustado para não ficar gigante no menu */
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif; 
+    color: white;
+    text-decoration: none; /* Importante para tirar o sublinhado */
+    transition: 0.5s;
 }
 
-/* Corrigido: Seletor hover para links dentro do menu */
-.menu-item a:hover{
+.menu-item:hover{
     color: pink;
-    font-size: 1.1em; /* Cuidado para não quebrar o layout com tamanhos muito grandes no hover */
-    transition: 0.5s;
+    transform: scale(1.1);
 }
 
 #destaque{
     text-align: center;
-    font-size: 1.2em; /* Adicionado valor que faltava */
+    padding: 40px;
+    font-size: 1.2em;
 }
 
 .btn-pedir{
@@ -58,23 +60,53 @@ body{
     border: none;
     font-family: 'Quicksand', sans-serif;
     font-size: 20px;
-    cursor: pointer; /* Adicionado para mostrar que é clicável */
+    cursor: pointer;
     transition: 0.3s;
 }
 
-/* Corrigido: Sintaxe do hover */
 .btn-pedir:hover{
-    background-color: palevioletred; /* Invertendo as cores para destaque */
+    background-color: palevioletred;
     color: white;
 }
 
-.sorvete{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 20px;
+/* --- AJUSTE PARA OS CARDS E IMAGENS DO SEU HTML NOVO --- */
+
+.container-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card-produto {
+    text-align: center;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 15px;
+    width: 250px;
+}
+
+.img-produto {
+    width: 100%;       /* Ocupa a largura do card */
+    height: 200px;     /* Altura fixa para ficar tudo alinhado */
+    object-fit: contain; /* Não deixa a imagem esticar */
+    margin: 10px 0;
+}
+
+.nome-produto {
+    font-weight: bold;
     color: palevioletred;
 }
 
-.sundae{
-    width: 300px;
-    height: auto; /* Mantém a proporção da imagem */
+.preco {
+    font-weight: bold;
+    color: #2ecc71; /* Verde para o preço */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: pink;
+    color: white;
 }
